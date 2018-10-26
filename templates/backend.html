@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<title>SRM Student Enrollment Form</title>
+   <body>
+   
+      <table border = 1>
+         <thead>
+            <td>Name</td>
+            <td>Registration No.</td>
+            <td>Year</td>
+			<td>Deptartment</td>
+            <td>Section</td>
+			<td>Campus</td>
+         </thead>
+         
+         {% for row in rows %}
+            <tr>
+               <td>{{row[0]}}</td>
+               <td>{{row[1]}}</td>
+               <td>{{row[2]}}</td>
+			   <td>{{row[4]}}</td>
+               <td>{{row[3]}}</td>	
+			   <td>{{row[5]}}</td>	
+            </tr>
+         {% endfor %}
+      </table>
+      
+      <button onclick="window.print();return false;">Print</button>
+	  
+      
+   </body>
+</html>
